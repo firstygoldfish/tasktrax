@@ -40,7 +40,7 @@ class Account
     {
       $sql = "SELECT name FROM $this->table_name
               WHERE name ='$userID' AND
-                    password = '$userPW'";
+                    password = '$userPW'";                           #" . password_hash('$userPW', PASSWORD_DEFAULT) . "'";
       if(!$result = $this->cxn->query($sql))             #74
       {
         throw new Exception("Could not query database: " . $this->cxn->error);

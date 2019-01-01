@@ -18,6 +18,6 @@
 		{
 			header("Location:mainpage.php");
 		} else {
-			echo "invalid User details.";
+			header("Location:index.php?loginfail=1");    #&" . $_POST["userPW"] . "='" . password_hash($_POST["userPW"], PASSWORD_DEFAULT) . "'");
 		}
 ?>

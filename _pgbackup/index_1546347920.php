@@ -16,7 +16,7 @@
         <form class="form-signin" action="login.php" method="post">
             <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">TaskTrax Login</h1>
-            <div id="errormsg" class="alert alert-danger d-none" role="alert">~=ERROR=~</div>
+            <div id="errormsg" class="alert alert-danger d-block" role="alert">~=ERROR=~</div>
             <script type="text/javascript">
             var url = new URL(window.location);
             var c = url.searchParams.get("loginfail");
