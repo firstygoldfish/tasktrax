@@ -15,7 +15,7 @@ class Database
     include("$filename");
     if(!$this->cxn = new mysqli($host,$user,$passwd))   #16
     {
-       throw new Exception("Database is not available. 
+       throw new Exception("Database is not available.
                             Try again later.");
        email("dbadmin@ourplace.com","DB Problem",
           "MySQL server is not responding. ".
@@ -30,8 +30,8 @@ class Database
   function useDatabase($dbname)
   {
     if(!$result = $this->cxn->query("SHOW DATABASES"))  #32
-    {        
-      throw new Exception("Database is not available. 
+    {
+      throw new Exception("Database is not available.
                            Try again later");
       email("dbadmin@ourplace.com","DB Problem",
          "MySQL server is not responding. "
@@ -68,7 +68,7 @@ class Database
   {
      return $this->database_name;
   }
-  
+
   function dumpTableData($table)
   {
 	 echo "[TABLE] <b>" . strtoupper($table) . "</b><br><br>";
@@ -85,4 +85,3 @@ class Database
   }
 }
 ?>
-

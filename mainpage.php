@@ -1,3 +1,12 @@
+<?php
+    require_once("classes/session.php");
+    $ses = new Session();
+	if (!$ses->authorised())
+    {
+      header("Location:index.php");
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -46,6 +55,7 @@
                 <h1>Bootstrap starter template</h1>
                 <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
             </div>
+          <a href="logout.php" class="btn btn-warning" role="button">Logout</a>
         </div>
         <!-- /.container -->
         <!-- Bootstrap core JavaScript
