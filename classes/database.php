@@ -68,7 +68,17 @@ class Database
   {
      return $this->database_name;
   }
-
+  function getRows($table,$order)
+  {
+    $sql = "Select * from " . $table;
+    if ($order != NULL)
+    {
+      $sql = $sql . " order by " . $order;
+    }
+    $sql = $sql . ";";
+    $resultset = mysqli_query($this->cxn, $sql);
+    return $resultset;
+  }
   function dumpTableData($table)
   {
 	 echo "[TABLE] <b>" . strtoupper($table) . "</b><br><br>";
